@@ -15,6 +15,14 @@ public class ArraysAreEqual {
      * @return true if the values of a are equal to the values of b.
      */
     public boolean equal(int[] a, int[] b){
-        return false;
+        // test cases indicate we can assume the lengths 
+        // of a and b are both equal and do not contian null values, therefore:
+        int arraysLength = a.length;
+        for (int i = 0; i < arraysLength; i++) {
+            if (a[i] != b[i]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
